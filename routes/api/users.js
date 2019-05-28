@@ -50,8 +50,12 @@ router.post("/register", (req, res) => {
 
 router.get("/", (req, res) => {
   User.find()
-  .then(user => res.json(user))
+  .then(user => res.json(user)).catch(err => res.json({err:"No user"}); 
 })
+
+
+
+
 router.get("/login/:id", (req, res) => {
   const id = req.params.id;
   User.find()

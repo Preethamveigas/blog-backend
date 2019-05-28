@@ -50,7 +50,7 @@ router.post("/register", (req, res) => {
 
 router.get("/", (req, res) => {
   User.find()
-  .then(user => res.json(user)).catch(err => res.json({err:"No user"}); 
+  .then(user => res.json(user)).catch(err => res.json({err:"No user"})); 
 })
 
 
